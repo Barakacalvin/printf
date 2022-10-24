@@ -1,0 +1,90 @@
+.\" _printf man page /usr/share/man/man3/printf
+.\"
+.PRINTF 3 "24-10-2021" "ALX-printf"
+
+.SH NAME
+_printf
+
+.B_printf - format and print data. Part of a project at ALX.
+
+.SH SYNOPSIS
+This project aims to mimic the printf found in C programming.
+
+_printf FORMAT [ARGUMENT]...
+.ss
+
+.SH DESCRIPTION
+
+_printf() the function produces output according to format string that \
+specifies how subsequent arguments are written and converted to stdout, the \
+standard output stream.
+
+_printf() loops through the format for a conversion specifier (%). If one is found\
+, it will then access an array of structures and match the corresponding character \
+with the corresponding function. The specified function will return a string-converted \
+version of the result and immediately passed into the buffer.
+
+.SH CONVERSION SPECIFIERS
+
+.IP %c
+prints out a character.
+
+.IP %d
+prints an integer, similar to %i.
+
+.IP %s
+prints a string.
+
+.IP %u
+Prints unsigned int.
+
+.IP %o
+Converts unsigned int to octal.
+
+.IP %x
+Converts unsigned int to hexadecimal (lowercase)
+
+.IP %X
+Converts unsigned int to hexadecimal (uppercase)
+
+.IP %r
+Prints reverse of intput string
+
+.IP %R
+Converts string to rot13
+
+.SH OPTIONS
+
+Pending
+
+.SH FORMAT
+controls the output as in C printf.  Interpreted sequences are:
+
+       \n     new line
+
+       \t     tab
+
+       %%     a single %
+
+.SS Example
+.RS
+_printf("Duck %s", "Sauce");
+Prints string "Duck Sauce"
+
+.RE
+
+.SS Return Value
+Upon success, these main function will return the number of characters printed.
+
+.SH "SEE ALSO"
+.SH ""
+
+.BR printf(1)
+
+.P
+
+.SH BUGS
+Memory issues.
+
+.SH "AUTHOR"
+Calvin Baraka
